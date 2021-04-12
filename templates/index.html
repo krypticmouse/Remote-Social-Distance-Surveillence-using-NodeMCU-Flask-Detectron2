@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+    <title>index</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      .column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+    margin: 20px;
+    margin-left: 100px;
+  }
+  
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .blinking {
+    -webkit-animation: 1s blink ease infinite;
+    -moz-animation: 1s blink ease infinite;
+    -ms-animation: 1s blink ease infinite;
+    -o-animation: 1s blink ease infinite;
+    animation: 1s blink ease infinite;
+    
+  }
+  
+  @keyframes "blink" {
+    from, to {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  @-moz-keyframes blink {
+    from, to {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  @-webkit-keyframes "blink" {
+    from, to {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  @-ms-keyframes "blink" {
+    from, to {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  @-o-keyframes "blink" {
+    from, to {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  </style>
+</head>
+  
+<body style="background-image: radial-gradient(rgb(255, 209, 209),rgb(255, 158, 255),rgb(212, 89, 89));">  
+    <h1 style="text-align: center; font-size:90px ; color: red; display: block;" class="blinking">LIVE . </h1>
+    <img src="{{ url_for('video1_feed') }}" alt="img1" style="border: 10px solid rgb(0, 0, 0);  width:50%">
+             
+</body>
+</html>
